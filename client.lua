@@ -13,6 +13,12 @@ Citizen.CreateThread(function()
     Citizen.Wait(0)
     if ragdoll then
     	SetPedToRagdoll(GetPlayerPed(-1), 1000, 1000, 0, 0, 0, 0)
+		local playerPed = GetPlayerPed(-1)
+		local Vehicle = GetVehiclePedIsIn(playerPed, false);
+		if Vehicle ~= 0 then
+			SetEntityAsMissionEntity(Vehicle, true, true);  
+			TaskLeaveVehicle(playerPed, Vehicle, 4160);
+		end
 		DisplayHelpText("Press ~INPUT_REPLAY_SCREENSHOT~ to stop ragdoll")
     end
   end
@@ -33,7 +39,7 @@ end)
 Citizen.CreateThread(function()
  	while true do
  		Citizen.Wait(100)
- 		if ( IsControlPressed(2, 303) ) then  --change key here
+ 		if ( IsControlPressed(1, 303) ) then
  			TriggerEvent("Ragdoll", source)
  		end
  	end

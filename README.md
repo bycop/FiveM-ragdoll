@@ -6,3 +6,5 @@
 - Add ensure ragdoll to your server.cfg
 - Now press "U" or /ragdoll ingame to ragdoll and press again "U" or type /ragdoll to stop ragdoll. <br>
 Preview here : https://streamable.com/yu403t
+- Add anim when inside a car
+![](example.gif)
