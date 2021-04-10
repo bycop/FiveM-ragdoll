@@ -48,3 +48,5 @@ end)
 RegisterCommand("ragdoll", function(source, args, rawCommand)
 	TriggerEvent("Ragdoll", source)
 end)
+
+TriggerEvent('chat:addSuggestion', '/ragdoll', 'Ragdoll or stop ragdoll')
