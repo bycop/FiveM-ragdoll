@@ -8,3 +8,4 @@
 Preview here : https://streamable.com/yu403t
 - Add anim when inside a car
 ![](example.gif)
+- Add keybind on Gta 5 Settings

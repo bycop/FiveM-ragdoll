@@ -1,3 +1,6 @@
+
+RegisterKeyMapping("ragdoll", "Ragdoll", "keyboard", 'u')
+
 function DisplayHelpText(text)
     BeginTextCommandDisplayHelp("STRING")
     AddTextComponentSubstringPlayerName(text)
@@ -34,15 +37,6 @@ AddEventHandler("Ragdoll", function()
 		setRagdoll(false)
 		ragdol = true
 	end
-end)
-
-Citizen.CreateThread(function()
- 	while true do
- 		Citizen.Wait(100)
- 		if ( IsControlPressed(1, 303) ) then
- 			TriggerEvent("Ragdoll", source)
- 		end
- 	end
 end)
 
 RegisterCommand("ragdoll", function(source, args, rawCommand)
